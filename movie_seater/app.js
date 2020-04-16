@@ -13,9 +13,9 @@ const updateSelectedCount = () => {
   //Map through array
   //return a new array of indexes
 
-  const seatIndex = [...selectedSeats].map((seat) => {
-    return [...seats].indexOf(seat);
-  });
+  const seatIndex = [...selectedSeats].map((seat) => [...seats].indexOf(seat));
+
+  localStorage.setItem("selectedSeats", JSON.stringify(seatIndex));
 
   const selectedSeatsCount = selectedSeats.length;
   count.innerText = selectedSeatsCount;
