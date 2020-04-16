@@ -1,11 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&display=swap");
+
 :root {
   --font-family: sans-serif;
-  --bg-color: #242333;
-  --color-1: #fff;
+  --bg-color: #1e1f26;
+  --color-1: #d0e1f9;
   --color-2: #444451;
-  --color-3: #6feaf6;
+  --color-3: #4d648d;
   --showcase-color: rgba(0, 0, 0, 0.1);
   --text-color: #777;
+  --text-color-1: #fff;
 }
 
 *,
@@ -20,7 +23,9 @@ body {
   box-sizing: border-box;
   font-size: 62.5%;
   background-color: var(--bg-color);
-  color: var(--color-1);
+  color: var(--text-color-1);
+  font-family: "Baloo Tamma 2", cursive;
+  font-weight: 500;
 
   display: flex;
   flex-direction: column;
@@ -34,12 +39,12 @@ body {
 }
 
 label {
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-right: 1rem;
 }
 
 .movie-container select {
-  background-color: var(--color-1);
+  background-color: var(--text-color-1);
   border: 0;
   border-radius: 0.5rem;
   font-size: 1rem;
@@ -51,7 +56,7 @@ label {
 }
 
 .showcase {
-  font-size: 1rem;
+  font-size: 1.2rem;
   background-color: var(--showcase-color);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
@@ -78,7 +83,7 @@ label {
 }
 
 .screen {
-  background-color: var(--color-1);
+  background-color: var(--text-color-1);
   height: 7rem;
   width: 100%;
   margin: 1.5rem 0;
@@ -128,9 +133,10 @@ label {
 
 p.text {
   margin: 0.5rem 0;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 p.text span {
-  color: var(--color-3);
+  color: #add6ff;
+  font-size: 1.8rem;
 }
