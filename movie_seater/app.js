@@ -6,6 +6,21 @@ const movieSelect = document.getElementById("select-movie");
 
 let ticketPrice = +movieSelect.value;
 
+//Get data from localstorage and populate UI
+const populateUI = () => {
+  const selectedSeats = JSON.parse(localStorage.getItem("selectedSeats"));
+
+  if (selectedSeats !== null && selectedSeats.length > 0) {
+    seats.forEach((seat, index) => {
+      if (selectedSeats.indexOf(index) > -1) {
+        seat.classList.add("selected");
+      }
+    });
+  }
+};
+
+populateUI();
+
 const updateSelectedCount = () => {
   const selectedSeats = document.querySelectorAll(".row .seat.selected");
 
