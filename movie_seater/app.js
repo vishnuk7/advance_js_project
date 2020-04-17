@@ -17,6 +17,12 @@ const populateUI = () => {
       }
     });
   }
+
+  const selectedMovieIndex = localStorage.getItem("selectedMovieIndex");
+
+  if (selectedMovieIndex !== null) {
+    movieSelect.selectedIndex = selectedMovieIndex;
+  }
 };
 
 populateUI();
@@ -63,3 +69,6 @@ const seatHandler = (e) => {
 };
 
 container.addEventListener("click", seatHandler);
+
+//Initial count and total set
+updateSelectedCount();
